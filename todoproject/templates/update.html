@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="shadow card">
+    <div class="card-header">
+        <div class="card-title">
+            ToDo Updation
+        </div>
+        <div class="card-text">
+            <form method="POST">
+                {% csrf_token %}
+                <a class="btn btn-info" href="{% url 'home' %}">Back</a>
+                {{form.as_p}}
+                <button class="btn btn-warning" type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

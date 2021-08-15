@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <p>Are you done the task</p><br>
+    <button class="btn btn-success" type="submit">Confirm</button>
+    <a class="btn btn-info" href="{% url 'home' %}">Back</a>
+</form>
+{% endblock %}
